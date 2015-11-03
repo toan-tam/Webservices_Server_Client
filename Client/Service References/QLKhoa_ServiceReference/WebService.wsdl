@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="selectAllKhoa">
+        <s:complexType />
+      </s:element>
+      <s:element name="selectAllKhoaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAllKhoaResult" type="tns:ResultOfListOfKhoa_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultOfListOfKhoa_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfKhoa_ett" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="tns:ErrorCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorInfor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfKhoa_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Khoa_ett" nillable="true" type="tns:Khoa_ett" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Khoa_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="makhoa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenkhoa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diachi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dienthoai" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ErrorCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Sucess" />
+          <s:enumeration value="False" />
+          <s:enumeration value="NaN" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="selectByFieldsKhoa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="how" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectByFieldsKhoaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectByFieldsKhoaResult" type="tns:ResultOfListOfKhoa_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertKhoa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dthoai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertKhoaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertKhoaResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultOfBoolean">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="data" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="tns:ErrorCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorInfor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="deleteKhoa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteKhoaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteKhoaResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editKhoa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dthoai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editKhoaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editKhoaResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectByPagingKhoa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="current_page" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectByPagingKhoaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectByPagingKhoaResult" type="tns:ResultOfListOfKhoa_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_page_total_of_khoa">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_page_total_of_khoaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_page_total_of_khoaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAllMon">
+        <s:complexType />
+      </s:element>
+      <s:element name="selectAllMonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAllMonResult" type="tns:ResultOfListOfMon_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultOfListOfMon_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfMon_ett" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="tns:ErrorCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorInfor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMon_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Mon_ett" nillable="true" type="tns:Mon_ett" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Mon_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="mamon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenmon" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="selectByFieldsMon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="how" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectByFieldsMonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectByFieldsMonResult" type="tns:ResultOfListOfMon_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertMon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertMonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertMonResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteMon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteMonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteMonResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editMon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editMonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editMonResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAllSinhVien">
+        <s:complexType />
+      </s:element>
+      <s:element name="selectAllSinhVienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAllSinhVienResult" type="tns:ResultOfListOfSinhVien_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultOfListOfSinhVien_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfSinhVien_ett" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="tns:ErrorCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorInfor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSinhVien_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SinhVien_ett" nillable="true" type="tns:SinhVien_ett" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SinhVien_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="masv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hoten" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="noisinh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="makhoa" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="selectByFieldsSinhVien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="how" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectByFieldsSinhVienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectByFieldsSinhVienResult" type="tns:ResultOfListOfSinhVien_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertSinhVien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ns" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mk" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertSinhVienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertSinhVienResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteSinhVien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteSinhVienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteSinhVienResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editSinhVien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ns" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mk" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editSinhVienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editSinhVienResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAllSinhVienCbx">
+        <s:complexType />
+      </s:element>
+      <s:element name="selectAllSinhVienCbxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAllSinhVienCbxResult" type="tns:ResultOfListOfSinhVienCbx_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultOfListOfSinhVienCbx_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfSinhVienCbx_ett" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="tns:ErrorCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorInfor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSinhVienCbx_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SinhVienCbx_ett" nillable="true" type="tns:SinhVienCbx_ett" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SinhVienCbx_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="masv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hoten" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="noisinh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="makhoa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="matensv" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="selectAllDiem">
+        <s:complexType />
+      </s:element>
+      <s:element name="selectAllDiemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAllDiemResult" type="tns:ResultOfListOfDiem_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultOfListOfDiem_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfDiem_ett" />
+          <s:element minOccurs="1" maxOccurs="1" name="errorCode" type="tns:ErrorCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorInfor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDiem_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Diem_ett" nillable="true" type="tns:Diem_ett" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Diem_ett">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="masv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mamon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diem" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="selectByFieldsDiem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="how" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectByFieldsDiemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectByFieldsDiemResult" type="tns:ResultOfListOfDiem_ett" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertDiem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mamon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertDiemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertDiemResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteDiem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mamon" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteDiemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteDiemResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editDiem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mamon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editDiemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editDiemResult" type="tns:ResultOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="selectAllKhoaSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAllKhoa" />
+  </wsdl:message>
+  <wsdl:message name="selectAllKhoaSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAllKhoaResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectByFieldsKhoaSoapIn">
+    <wsdl:part name="parameters" element="tns:selectByFieldsKhoa" />
+  </wsdl:message>
+  <wsdl:message name="selectByFieldsKhoaSoapOut">
+    <wsdl:part name="parameters" element="tns:selectByFieldsKhoaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertKhoaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertKhoa" />
+  </wsdl:message>
+  <wsdl:message name="insertKhoaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertKhoaResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteKhoaSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteKhoa" />
+  </wsdl:message>
+  <wsdl:message name="deleteKhoaSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteKhoaResponse" />
+  </wsdl:message>
+  <wsdl:message name="editKhoaSoapIn">
+    <wsdl:part name="parameters" element="tns:editKhoa" />
+  </wsdl:message>
+  <wsdl:message name="editKhoaSoapOut">
+    <wsdl:part name="parameters" element="tns:editKhoaResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectByPagingKhoaSoapIn">
+    <wsdl:part name="parameters" element="tns:selectByPagingKhoa" />
+  </wsdl:message>
+  <wsdl:message name="selectByPagingKhoaSoapOut">
+    <wsdl:part name="parameters" element="tns:selectByPagingKhoaResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_page_total_of_khoaSoapIn">
+    <wsdl:part name="parameters" element="tns:get_page_total_of_khoa" />
+  </wsdl:message>
+  <wsdl:message name="get_page_total_of_khoaSoapOut">
+    <wsdl:part name="parameters" element="tns:get_page_total_of_khoaResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAllMonSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAllMon" />
+  </wsdl:message>
+  <wsdl:message name="selectAllMonSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAllMonResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectByFieldsMonSoapIn">
+    <wsdl:part name="parameters" element="tns:selectByFieldsMon" />
+  </wsdl:message>
+  <wsdl:message name="selectByFieldsMonSoapOut">
+    <wsdl:part name="parameters" element="tns:selectByFieldsMonResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertMonSoapIn">
+    <wsdl:part name="parameters" element="tns:insertMon" />
+  </wsdl:message>
+  <wsdl:message name="insertMonSoapOut">
+    <wsdl:part name="parameters" element="tns:insertMonResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteMonSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteMon" />
+  </wsdl:message>
+  <wsdl:message name="deleteMonSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteMonResponse" />
+  </wsdl:message>
+  <wsdl:message name="editMonSoapIn">
+    <wsdl:part name="parameters" element="tns:editMon" />
+  </wsdl:message>
+  <wsdl:message name="editMonSoapOut">
+    <wsdl:part name="parameters" element="tns:editMonResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAllSinhVienSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAllSinhVien" />
+  </wsdl:message>
+  <wsdl:message name="selectAllSinhVienSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAllSinhVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectByFieldsSinhVienSoapIn">
+    <wsdl:part name="parameters" element="tns:selectByFieldsSinhVien" />
+  </wsdl:message>
+  <wsdl:message name="selectByFieldsSinhVienSoapOut">
+    <wsdl:part name="parameters" element="tns:selectByFieldsSinhVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertSinhVienSoapIn">
+    <wsdl:part name="parameters" element="tns:insertSinhVien" />
+  </wsdl:message>
+  <wsdl:message name="insertSinhVienSoapOut">
+    <wsdl:part name="parameters" element="tns:insertSinhVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteSinhVienSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteSinhVien" />
+  </wsdl:message>
+  <wsdl:message name="deleteSinhVienSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteSinhVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="editSinhVienSoapIn">
+    <wsdl:part name="parameters" element="tns:editSinhVien" />
+  </wsdl:message>
+  <wsdl:message name="editSinhVienSoapOut">
+    <wsdl:part name="parameters" element="tns:editSinhVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAllSinhVienCbxSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAllSinhVienCbx" />
+  </wsdl:message>
+  <wsdl:message name="selectAllSinhVienCbxSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAllSinhVienCbxResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAllDiemSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAllDiem" />
+  </wsdl:message>
+  <wsdl:message name="selectAllDiemSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAllDiemResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectByFieldsDiemSoapIn">
+    <wsdl:part name="parameters" element="tns:selectByFieldsDiem" />
+  </wsdl:message>
+  <wsdl:message name="selectByFieldsDiemSoapOut">
+    <wsdl:part name="parameters" element="tns:selectByFieldsDiemResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertDiemSoapIn">
+    <wsdl:part name="parameters" element="tns:insertDiem" />
+  </wsdl:message>
+  <wsdl:message name="insertDiemSoapOut">
+    <wsdl:part name="parameters" element="tns:insertDiemResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteDiemSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteDiem" />
+  </wsdl:message>
+  <wsdl:message name="deleteDiemSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteDiemResponse" />
+  </wsdl:message>
+  <wsdl:message name="editDiemSoapIn">
+    <wsdl:part name="parameters" element="tns:editDiem" />
+  </wsdl:message>
+  <wsdl:message name="editDiemSoapOut">
+    <wsdl:part name="parameters" element="tns:editDiemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="selectAllKhoa">
+      <wsdl:input message="tns:selectAllKhoaSoapIn" />
+      <wsdl:output message="tns:selectAllKhoaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsKhoa">
+      <wsdl:input message="tns:selectByFieldsKhoaSoapIn" />
+      <wsdl:output message="tns:selectByFieldsKhoaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertKhoa">
+      <wsdl:input message="tns:insertKhoaSoapIn" />
+      <wsdl:output message="tns:insertKhoaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteKhoa">
+      <wsdl:input message="tns:deleteKhoaSoapIn" />
+      <wsdl:output message="tns:deleteKhoaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editKhoa">
+      <wsdl:input message="tns:editKhoaSoapIn" />
+      <wsdl:output message="tns:editKhoaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectByPagingKhoa">
+      <wsdl:input message="tns:selectByPagingKhoaSoapIn" />
+      <wsdl:output message="tns:selectByPagingKhoaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_page_total_of_khoa">
+      <wsdl:input message="tns:get_page_total_of_khoaSoapIn" />
+      <wsdl:output message="tns:get_page_total_of_khoaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAllMon">
+      <wsdl:input message="tns:selectAllMonSoapIn" />
+      <wsdl:output message="tns:selectAllMonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsMon">
+      <wsdl:input message="tns:selectByFieldsMonSoapIn" />
+      <wsdl:output message="tns:selectByFieldsMonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertMon">
+      <wsdl:input message="tns:insertMonSoapIn" />
+      <wsdl:output message="tns:insertMonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteMon">
+      <wsdl:input message="tns:deleteMonSoapIn" />
+      <wsdl:output message="tns:deleteMonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editMon">
+      <wsdl:input message="tns:editMonSoapIn" />
+      <wsdl:output message="tns:editMonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAllSinhVien">
+      <wsdl:input message="tns:selectAllSinhVienSoapIn" />
+      <wsdl:output message="tns:selectAllSinhVienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsSinhVien">
+      <wsdl:input message="tns:selectByFieldsSinhVienSoapIn" />
+      <wsdl:output message="tns:selectByFieldsSinhVienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSinhVien">
+      <wsdl:input message="tns:insertSinhVienSoapIn" />
+      <wsdl:output message="tns:insertSinhVienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSinhVien">
+      <wsdl:input message="tns:deleteSinhVienSoapIn" />
+      <wsdl:output message="tns:deleteSinhVienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editSinhVien">
+      <wsdl:input message="tns:editSinhVienSoapIn" />
+      <wsdl:output message="tns:editSinhVienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAllSinhVienCbx">
+      <wsdl:input message="tns:selectAllSinhVienCbxSoapIn" />
+      <wsdl:output message="tns:selectAllSinhVienCbxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAllDiem">
+      <wsdl:input message="tns:selectAllDiemSoapIn" />
+      <wsdl:output message="tns:selectAllDiemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsDiem">
+      <wsdl:input message="tns:selectByFieldsDiemSoapIn" />
+      <wsdl:output message="tns:selectByFieldsDiemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertDiem">
+      <wsdl:input message="tns:insertDiemSoapIn" />
+      <wsdl:output message="tns:insertDiemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDiem">
+      <wsdl:input message="tns:deleteDiemSoapIn" />
+      <wsdl:output message="tns:deleteDiemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editDiem">
+      <wsdl:input message="tns:editDiemSoapIn" />
+      <wsdl:output message="tns:editDiemSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="selectAllKhoa">
+      <soap:operation soapAction="http://tempuri.org/selectAllKhoa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsKhoa">
+      <soap:operation soapAction="http://tempuri.org/selectByFieldsKhoa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertKhoa">
+      <soap:operation soapAction="http://tempuri.org/insertKhoa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteKhoa">
+      <soap:operation soapAction="http://tempuri.org/deleteKhoa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editKhoa">
+      <soap:operation soapAction="http://tempuri.org/editKhoa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByPagingKhoa">
+      <soap:operation soapAction="http://tempuri.org/selectByPagingKhoa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_page_total_of_khoa">
+      <soap:operation soapAction="http://tempuri.org/get_page_total_of_khoa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllMon">
+      <soap:operation soapAction="http://tempuri.org/selectAllMon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsMon">
+      <soap:operation soapAction="http://tempuri.org/selectByFieldsMon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMon">
+      <soap:operation soapAction="http://tempuri.org/insertMon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMon">
+      <soap:operation soapAction="http://tempuri.org/deleteMon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editMon">
+      <soap:operation soapAction="http://tempuri.org/editMon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllSinhVien">
+      <soap:operation soapAction="http://tempuri.org/selectAllSinhVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsSinhVien">
+      <soap:operation soapAction="http://tempuri.org/selectByFieldsSinhVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSinhVien">
+      <soap:operation soapAction="http://tempuri.org/insertSinhVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSinhVien">
+      <soap:operation soapAction="http://tempuri.org/deleteSinhVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editSinhVien">
+      <soap:operation soapAction="http://tempuri.org/editSinhVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllSinhVienCbx">
+      <soap:operation soapAction="http://tempuri.org/selectAllSinhVienCbx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllDiem">
+      <soap:operation soapAction="http://tempuri.org/selectAllDiem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsDiem">
+      <soap:operation soapAction="http://tempuri.org/selectByFieldsDiem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertDiem">
+      <soap:operation soapAction="http://tempuri.org/insertDiem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDiem">
+      <soap:operation soapAction="http://tempuri.org/deleteDiem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDiem">
+      <soap:operation soapAction="http://tempuri.org/editDiem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="selectAllKhoa">
+      <soap12:operation soapAction="http://tempuri.org/selectAllKhoa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsKhoa">
+      <soap12:operation soapAction="http://tempuri.org/selectByFieldsKhoa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertKhoa">
+      <soap12:operation soapAction="http://tempuri.org/insertKhoa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteKhoa">
+      <soap12:operation soapAction="http://tempuri.org/deleteKhoa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editKhoa">
+      <soap12:operation soapAction="http://tempuri.org/editKhoa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByPagingKhoa">
+      <soap12:operation soapAction="http://tempuri.org/selectByPagingKhoa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_page_total_of_khoa">
+      <soap12:operation soapAction="http://tempuri.org/get_page_total_of_khoa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllMon">
+      <soap12:operation soapAction="http://tempuri.org/selectAllMon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsMon">
+      <soap12:operation soapAction="http://tempuri.org/selectByFieldsMon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMon">
+      <soap12:operation soapAction="http://tempuri.org/insertMon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMon">
+      <soap12:operation soapAction="http://tempuri.org/deleteMon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editMon">
+      <soap12:operation soapAction="http://tempuri.org/editMon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllSinhVien">
+      <soap12:operation soapAction="http://tempuri.org/selectAllSinhVien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsSinhVien">
+      <soap12:operation soapAction="http://tempuri.org/selectByFieldsSinhVien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSinhVien">
+      <soap12:operation soapAction="http://tempuri.org/insertSinhVien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSinhVien">
+      <soap12:operation soapAction="http://tempuri.org/deleteSinhVien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editSinhVien">
+      <soap12:operation soapAction="http://tempuri.org/editSinhVien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllSinhVienCbx">
+      <soap12:operation soapAction="http://tempuri.org/selectAllSinhVienCbx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllDiem">
+      <soap12:operation soapAction="http://tempuri.org/selectAllDiem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectByFieldsDiem">
+      <soap12:operation soapAction="http://tempuri.org/selectByFieldsDiem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertDiem">
+      <soap12:operation soapAction="http://tempuri.org/insertDiem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDiem">
+      <soap12:operation soapAction="http://tempuri.org/deleteDiem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDiem">
+      <soap12:operation soapAction="http://tempuri.org/editDiem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:64945/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:64945/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

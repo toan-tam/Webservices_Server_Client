@@ -1,0 +1,59 @@
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\csc.exe
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\System.Collections.Immutable.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\System.Reflection.Metadata.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\vbc.exe
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\VBCSCompiler.exe
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\roslyn\VBCSCompiler.exe.config
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\ServerClient.dll.config
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\ServerClient.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\ServerClient.pdb
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\.Net Thầy Dương\ServerClient\ServerClient\obj\Debug\ServerClient.dll
+E:\.Net Thầy Dương\ServerClient\ServerClient\obj\Debug\ServerClient.pdb
+E:\.Net Thầy Dương\ServerClient\ServerClient\obj\Debug\ServerClient.csprojResolveAssemblyReference.cache
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\csc.exe
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\vbc.exe
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\VBCSCompiler.exe
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\ServerClient.dll.config
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\ServerClient.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\ServerClient.pdb
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\obj\Debug\ServerClient.csprojResolveAssemblyReference.cache
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\obj\Debug\ServerClient.dll
+C:\Users\toan\Desktop\ThayDuong\ServerClient\ServerClient\obj\Debug\ServerClient.pdb
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\csc.exe
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\System.Collections.Immutable.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\System.Reflection.Metadata.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\vbc.exe
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\VBCSCompiler.exe
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\roslyn\VBCSCompiler.exe.config
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\ServerClient.dll.config
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\ServerClient.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\ServerClient.pdb
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\.Net ThayDuong\ServerClient\ServerClient\obj\Debug\ServerClient.dll
+D:\.Net ThayDuong\ServerClient\ServerClient\obj\Debug\ServerClient.pdb

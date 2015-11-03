@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AC9160F-0A84-409D-B39D-B9B6897D7829}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\how_to_search.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\QLKhoa_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Shareds\Constants.cs" />
+    <Compile Include="Models\Option.cs" />
+    <Compile Include="Shareds\Utils.cs" />
+    <Compile Include="Views\frm_Diem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_Diem.Designer.cs">
+      <DependentUpon>frm_Diem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_Khoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_Khoa.Designer.cs">
+      <DependentUpon>frm_Khoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_Mon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_Mon.Designer.cs">
+      <DependentUpon>frm_Mon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_SinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_SinhVien.Designer.cs">
+      <DependentUpon>frm_SinhVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\frm_Diem.resx">
+      <DependentUpon>frm_Diem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_Khoa.resx">
+      <DependentUpon>frm_Khoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_Mon.resx">
+      <DependentUpon>frm_Mon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_SinhVien.resx">
+      <DependentUpon>frm_SinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.deleteDiemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.deleteKhoaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.deleteMonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.deleteSinhVienResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.editDiemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.editKhoaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.editMonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.editSinhVienResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.insertDiemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.insertKhoaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.insertMonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.insertSinhVienResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.ResultOfBoolean.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.ResultOfListOfDiem_ett.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.ResultOfListOfKhoa_ett.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.ResultOfListOfMon_ett.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.ResultOfListOfSinhVienCbx_ett.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.ResultOfListOfSinhVien_ett.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectAllDiemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectAllKhoaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectAllMonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectAllSinhVienCbxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectAllSinhVienResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectByFieldsDiemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectByFieldsKhoaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectByFieldsMonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectByFieldsSinhVienResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\Client.QLKhoa_ServiceReference.selectByPagingKhoaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLKhoa_ServiceReference\WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\QLKhoa_ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QLKhoa_ServiceReference\WebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QLKhoa_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QLKhoa_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QLKhoa_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLKhoa">
+  <DataContextMoniker Name="/QLKhoaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="aabc37cb-2fe5-4476-bc17-2e1ef466f7c6" absoluteBounds="3.5, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLKhoaDataContext/tbl_sinhvien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cbed4f75-0f34-4052-8843-df471dc55e55" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1851e280-d9d6-4a09-9523-acc11eae4004" absoluteBounds="6.25, 1, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/QLKhoaDataContext/tbl_diem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0a01347-ceaa-4b29-8ebc-7c00ea65bbc9" absoluteBounds="6.265, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea320ac9-c807-4f39-a135-92d3a20a280d" absoluteBounds="0.75, 0.875, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/QLKhoaDataContext/tbl_khoa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f36ca5cc-9f46-4966-a917-594b72c4dfb0" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="208817c2-35e9-42ea-be29-5334d468ec60" absoluteBounds="3.5, 4.125, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/QLKhoaDataContext/tbl_mon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bed4493-284a-4da9-93ae-d3efd970888f" absoluteBounds="3.515, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.69314697265625); (6.25 : 1.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLKhoaDataContext/tbl_sinhvien/tbl_sinhvien_tbl_diem" />
+      <nodes>
+        <classShapeMoniker Id="aabc37cb-2fe5-4476-bc17-2e1ef466f7c6" />
+        <classShapeMoniker Id="1851e280-d9d6-4a09-9523-acc11eae4004" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.66429768880208); (3.5 : 1.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLKhoaDataContext/tbl_khoa/tbl_khoa_tbl_sinhvien" />
+      <nodes>
+        <classShapeMoniker Id="ea320ac9-c807-4f39-a135-92d3a20a280d" />
+        <classShapeMoniker Id="aabc37cb-2fe5-4476-bc17-2e1ef466f7c6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.72199625651042); (7.25 : 4.72199625651042); (7.25 : 2.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLKhoaDataContext/tbl_mon/tbl_mon_tbl_diem" />
+      <nodes>
+        <classShapeMoniker Id="208817c2-35e9-42ea-be29-5334d468ec60" />
+        <classShapeMoniker Id="1851e280-d9d6-4a09-9523-acc11eae4004" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

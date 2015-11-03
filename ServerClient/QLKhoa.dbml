@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLKhoa" Class="QLKhoaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=TOANTAM\SQLEXPRESS;Initial Catalog=QLKhoa;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLKhoaConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_sinhvien" Member="tbl_sinhviens">
+    <Type Name="tbl_sinhvien">
+      <Column Name="masv" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noisinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="makhoa" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="tbl_sinhvien_tbl_diem" Member="tbl_diems" ThisKey="masv" OtherKey="masv" Type="tbl_diem" />
+      <Association Name="tbl_khoa_tbl_sinhvien" Member="tbl_khoa" ThisKey="makhoa" OtherKey="makhoa" Type="tbl_khoa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_diem" Member="tbl_diems">
+    <Type Name="tbl_diem">
+      <Column Name="masv" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mamon" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="diem" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Association Name="tbl_sinhvien_tbl_diem" Member="tbl_sinhvien" ThisKey="masv" OtherKey="masv" Type="tbl_sinhvien" IsForeignKey="true" />
+      <Association Name="tbl_mon_tbl_diem" Member="tbl_mon" ThisKey="mamon" OtherKey="mamon" Type="tbl_mon" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_khoa" Member="tbl_khoas">
+    <Type Name="tbl_khoa">
+      <Column Name="makhoa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenkhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dienthoai" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Association Name="tbl_khoa_tbl_sinhvien" Member="tbl_sinhviens" ThisKey="makhoa" OtherKey="makhoa" Type="tbl_sinhvien" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_mon" Member="tbl_mons">
+    <Type Name="tbl_mon">
+      <Column Name="mamon" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenmon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_mon_tbl_diem" Member="tbl_diems" ThisKey="mamon" OtherKey="mamon" Type="tbl_diem" />
+    </Type>
+  </Table>
+</Database>

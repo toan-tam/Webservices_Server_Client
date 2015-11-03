@@ -1,0 +1,31 @@
+E:\.Net Thầy Dương\ServerClient\Client\bin\Debug\Client.exe.config
+E:\.Net Thầy Dương\ServerClient\Client\bin\Debug\Client.exe
+E:\.Net Thầy Dương\ServerClient\Client\bin\Debug\Client.pdb
+E:\.Net Thầy Dương\ServerClient\Client\obj\Debug\Client.Form1.resources
+E:\.Net Thầy Dương\ServerClient\Client\obj\Debug\Client.Properties.Resources.resources
+E:\.Net Thầy Dương\ServerClient\Client\obj\Debug\Client.Views.frm_Khoa.resources
+E:\.Net Thầy Dương\ServerClient\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+E:\.Net Thầy Dương\ServerClient\Client\obj\Debug\Client.exe
+E:\.Net Thầy Dương\ServerClient\Client\obj\Debug\Client.pdb
+E:\.Net Thầy Dương\ServerClient\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\bin\Debug\Client.exe.config
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\obj\Debug\Client.exe
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\obj\Debug\Client.pdb
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\bin\Debug\Client.exe
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\bin\Debug\Client.pdb
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\obj\Debug\Client.Form1.resources
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\obj\Debug\Client.Views.frm_Khoa.resources
+C:\Users\toan\Desktop\ThayDuong\ServerClient\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\.Net ThayDuong\ServerClient\Client\bin\Debug\Client.exe.config
+D:\.Net ThayDuong\ServerClient\Client\bin\Debug\Client.exe
+D:\.Net ThayDuong\ServerClient\Client\bin\Debug\Client.pdb
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.Form1.resources
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.Properties.Resources.resources
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.Views.frm_Diem.resources
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.Views.frm_Khoa.resources
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.Views.frm_Mon.resources
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.Views.frm_SinhVien.resources
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.exe
+D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.pdb
