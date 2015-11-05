@@ -35,5 +35,9 @@ namespace Client.Shareds
         public static string  success_delete = "Success delete !";
         public static string  warning_caption = "Warning !";
         public static string error_not_list_khoa = "Error ! you have to input the right data!";
+
+        public static int btn_width = 35;
+        public static int btn_height = 30;
+
     }
 }

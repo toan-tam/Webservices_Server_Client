@@ -84,8 +84,9 @@ namespace Client.Views
             cbx_option_search.SelectedIndex = 1;
 
             current_page = 1; // constructed value for current_pages
-            set_btn_paging();
             Update_dtg_data();
+            set_btn_paging();
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -391,7 +392,25 @@ namespace Client.Views
         // update data for dtgv_khoa;  
         public void Update_dtg_data()
         {
-            
+            var rs = cl.selectByPagingKhoa(current_page);
+            switch (rs.errorCode)
+            {
+                case QLKhoa_ServiceReference.ErrorCode.Sucess:
+                    dtgv_khoa.DataSource = rs.data;
+                    break;
+                case QLKhoa_ServiceReference.ErrorCode.False:
+                    dtgv_khoa.DataSource = null;
+                    if (Utils.switch_false())
+                    {
+                        MessageBox.Show(rs.errorInfor);
+                    }
+                    break;
+                case QLKhoa_ServiceReference.ErrorCode.NaN:
+                    break;
+                default:
+                    break;
+            }
+            set_btn_paging();
         }
 
         public void set_btn_paging()
@@ -401,6 +420,62 @@ namespace Client.Views
 
             // get page_total
             page_total = cl.get_page_total_of_khoa();
+
+            //check current_page
+            if (current_page <= 0)
+            {
+                current_page = 1;
+            }
+            else
+            {
+                if (current_page > page_total)
+                {
+                    current_page = page_total;
+                }
+                else
+                {
+                    // trả về trường hợp đúng
+                    int x = (int)(groupBox2.Width - Constants.btn_width) / 2;
+                    int y = (int)(groupBox2.Height - Constants.btn_height) / 2 + 3;
+                    add_lbl_into_gr2(x, y, "lbl_currentPage", current_page.ToString());
+
+
+                    //
+                }
+            }
+        }
+
+        public void add_lbl_into_gr2(int x, int y, string lbl_name, string lbl_text)
+        {
+            Label lbl = new Label();
+            lbl.Width = Constants.btn_width;
+            lbl.Height = Constants.btn_height;
+            lbl.Location = new Point(x, y);
+            lbl.Anchor = AnchorStyles.None;
+            lbl.Name = lbl_name;
+            lbl.Text = lbl_text;
+
+            groupBox2.Controls.Add(lbl);
+        }
+        public void add_btn_into_gr2(int x, int y, string btn_name, string btn_text)
+        {
+            Button btn = new Button();
+            btn.Width = Constants.btn_width;
+            btn.Height = Constants.btn_height;
+            btn.Location = new Point(x, y);
+            btn.Anchor = AnchorStyles.None;
+            btn.Name = btn_name;
+            btn.Text = btn_text;
+
+            btn.Click += Btn_Click;
+            groupBox2.Controls.Add(btn);
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            Button btn_click = (Button)sender;
+            current_page = int.Parse(btn_click.Text);
+            Update_dtg_data();
         }
         #endregion
     }

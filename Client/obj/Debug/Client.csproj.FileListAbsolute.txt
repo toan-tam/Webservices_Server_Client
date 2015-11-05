@@ -41,3 +41,4 @@ D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.Views.frm_SinhVien.r
 D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.exe
 D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.pdb
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
