@@ -131,16 +131,18 @@ namespace Client.Views
 
 
                 // display data from datagridview to combobox
-                var x = cbx_makhoa.Items.Count;
-                for (int i = 0; i < x; i++)
-                {
-                    cbx_makhoa.SelectedIndex = i;
-                    if (temp.Cells[3].Value.ToString() == cbx_makhoa.Text)
-                    {
-                        cbx_makhoa.Text = temp.Cells[3].Value.ToString();
-                        break;
-                    }
-                }
+                //var x = cbx_makhoa.Items.Count;
+                //for (int i = 0; i < x; i++)
+                //{
+                //    cbx_makhoa.SelectedIndex = i;
+                //    if (temp.Cells[3].Value.ToString() == cbx_makhoa.Text)
+                //    {
+                //        cbx_makhoa.Text = temp.Cells[3].Value.ToString();
+                //        break;
+                //    }
+                //}
+
+                cbx_makhoa.Text = temp.Cells[3].Value.ToString();
 
             }
         }
@@ -437,5 +439,6 @@ namespace Client.Views
                 cbx_makhoa.Focus();
             }
         }
+
     }
 }

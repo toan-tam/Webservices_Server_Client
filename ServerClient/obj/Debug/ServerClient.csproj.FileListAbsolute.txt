@@ -57,3 +57,23 @@ D:\.Net ThayDuong\ServerClient\ServerClient\bin\Microsoft.CodeDom.Providers.DotN
 D:\.Net ThayDuong\ServerClient\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\.Net ThayDuong\ServerClient\ServerClient\obj\Debug\ServerClient.dll
 D:\.Net ThayDuong\ServerClient\ServerClient\obj\Debug\ServerClient.pdb
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\csc.exe
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\System.Collections.Immutable.dll
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\System.Reflection.Metadata.dll
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\vbc.exe
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\VBCSCompiler.exe
+D:\Github\Webservices_Server_Client\ServerClient\bin\roslyn\VBCSCompiler.exe.config
+D:\Github\Webservices_Server_Client\ServerClient\bin\ServerClient.dll.config
+D:\Github\Webservices_Server_Client\ServerClient\bin\ServerClient.dll
+D:\Github\Webservices_Server_Client\ServerClient\bin\ServerClient.pdb
+D:\Github\Webservices_Server_Client\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Github\Webservices_Server_Client\ServerClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Github\Webservices_Server_Client\ServerClient\obj\Debug\ServerClient.csprojResolveAssemblyReference.cache
+D:\Github\Webservices_Server_Client\ServerClient\obj\Debug\ServerClient.dll
+D:\Github\Webservices_Server_Client\ServerClient\obj\Debug\ServerClient.pdb

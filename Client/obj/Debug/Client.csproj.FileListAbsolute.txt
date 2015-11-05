@@ -29,3 +29,15 @@ D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.Views.frm_SinhVien.resour
 D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.exe
 D:\.Net ThayDuong\ServerClient\Client\obj\Debug\Client.pdb
+D:\Github\Webservices_Server_Client\Client\bin\Debug\Client.exe.config
+D:\Github\Webservices_Server_Client\Client\bin\Debug\Client.exe
+D:\Github\Webservices_Server_Client\Client\bin\Debug\Client.pdb
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.Form1.resources
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.Properties.Resources.resources
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.Views.frm_Diem.resources
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.Views.frm_Khoa.resources
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.Views.frm_Mon.resources
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.Views.frm_SinhVien.resources
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.exe
+D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.pdb

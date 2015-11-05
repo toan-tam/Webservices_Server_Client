@@ -235,6 +235,8 @@
             this.dtgv_khoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_khoa.Size = new System.Drawing.Size(445, 243);
             this.dtgv_khoa.TabIndex = 22;
+            this.dtgv_khoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_khoa_CellContentClick);
+            this.dtgv_khoa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_khoa_CellContentClick);
             this.dtgv_khoa.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgv_khoa_ColumnHeaderMouseClick);
             // 
             // groupBox1
