@@ -42,3 +42,6 @@ D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.csproj.GenerateResou
 D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.exe
 D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.pdb
 D:\Github\Webservices_Server_Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\TOAN\Documents\GitHub\Webservices_Server_Client\Client\bin\Debug\Client.exe.config
+C:\Users\TOAN\Documents\GitHub\Webservices_Server_Client\Client\obj\Debug\Client.exe
+C:\Users\TOAN\Documents\GitHub\Webservices_Server_Client\Client\obj\Debug\Client.pdb
